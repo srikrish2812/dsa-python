@@ -49,6 +49,17 @@ dev = ["pre-commit", "tox"]
 testing = ["pytest", "pytest-benchmark"]
 
 [[package]]
+name = "pycowsay"
+version = "0.0.0.2"
+description = ""
+optional = false
+python-versions = ">=3.6"
+files = [
+    {file = "pycowsay-0.0.0.2-py3-none-any.whl", hash = "sha256:5c03d8a9c7666ec102aaed4bbd6c7d35228489ce236f95f6e5d079529c6a5050"},
+    {file = "pycowsay-0.0.0.2.tar.gz", hash = "sha256:d112c4ce55b04dbc363c5a8957b80a0dc7459e864866d6e0202d15a95633bcf4"},
+]
+
+[[package]]
 name = "pytest"
 version = "8.3.4"
 description = "pytest: simple powerful testing with Python"
@@ -71,4 +82,4 @@ dev = ["argcomplete", "attrs (>=19.2)", "hypothesis (>=3.56)", "mock", "pygments
 [metadata]
 lock-version = "2.0"
 python-versions = "3.11.4"
-content-hash = "27735ee05e47ebcb2453ef739dcb448ca4354eb341e94d15242556ad8e90d0e9"
+content-hash = "caab4b588db443c0b156a23ec8c5855b4b2af414630e3f5f82a280bb9416bf24"
