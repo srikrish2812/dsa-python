@@ -98,3 +98,6 @@ else:
 # Count operation
 count = sum(1 for element in my_set if element == 0)
 print("Count of 0:", count)  # 1
+
+x= [1,2,3]
+print()
