@@ -38,3 +38,34 @@ if NUM == rev_num:
     print(f"{NUM} is a Palindrome\n")
 else:
     print(f"{NUM} Not a Palindrome\n")
+
+
+# print all the divisors of a number
+
+n = 36
+divisors = []
+# O(sqrt(n))
+for i in range(1,int(n**0.5)+1):
+    if n%i==0:
+        divisors.append(i)
+        if i!=n//i:
+            divisors.append(n//i)
+divisors.sort() # O(sqrt(n))
+print("-"*10 + f"Divisors of {n}" + "-"*10)
+for i in divisors: # O(no of divisors)
+    print(i)
+print("--"*20)
+
+
+# check if the prime or not
+
+count = 0
+for i in range(1, int(n**0.5)+1):
+    if n%i==0:
+        count+=1
+        if i!=n//i:
+            count+=1
+if count ==2:
+    print(f"{n} is prime")
+else:
+    print(f"{n} is not prime, num of divisors = {count}")
