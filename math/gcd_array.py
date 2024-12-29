@@ -18,3 +18,13 @@ class solution:
             for i in range(N-2):
                 gcd = get_hcf(gcd, arr[i+2])
             return gcd
+
+
+# recursive version of gcd
+a,b=48,18
+def gcd(a, b):
+    if a == 0:
+        return b
+    print(a,b)
+    return gcd(b % a, a)
+print(gcd(a,b))
