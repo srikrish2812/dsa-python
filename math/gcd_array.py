@@ -21,7 +21,7 @@ class solution:
 
 
 # recursive version of gcd
-a,b=48,18
+a,b=48,12
 def gcd(a, b):
     if a == 0:
         return b
