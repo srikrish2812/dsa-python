@@ -1,15 +1,15 @@
-def cal_sum(n=10):
-    if n==0:
-        return 0
-    else:
-        return n+cal_sum(n-1)
-print(cal_sum())
-print(cal_sum(n=25))
+"""
+1. function calling itself is called recursion
+2. whenever a function calls itself it creates a copy of itself in the memory stack and calls it
+3. each copy of the function is in a memory stack
+4. If the memory stack is full it is called stack overflow
+"""
+def hello():
+    print("Hello World")
+    hello()
 
+def main():
+    hello()
+    return 0
 
-def rec_gcd(a=48, b=54):
-    if a==0:
-        return b
-    return rec_gcd(b%a,a)
-
-print(rec_gcd())
+main()
