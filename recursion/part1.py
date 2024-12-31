@@ -13,12 +13,18 @@
 #     hello()
 #     return 0
 
+"""
+In the below example, the hello() function is called 5 times and in the 5th time
+the base case is satisfied and further recursion stops and it returns nothing. When
+the function execution completes(i.e., after it returns something or nothing) it is
+popped from the memory stack.
+"""
 i = 0
 def hello():
     global i # tells the function to use the global variable i
-    if i==4:return
+    if i==4:return # base case or stop condition
     i+=1
-    print("Hello")
+    print("Hello recursion")
     hello()
 
 def main():
