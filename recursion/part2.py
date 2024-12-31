@@ -1,5 +1,11 @@
 # printing 1 to n and n to 1 using recursion
-
+""""
+In recursion you do a process or computation first and then call the function again
+whereas in backtracking you call the function first perform the computation.
+In the display_ni_2(), first the function is called and then print() statement.
+When the base case is satisified it starts printing from the latest function in the
+memory stack.
+"""
 def display_in(i,n):
     if i==n+1: return
     print(i)
