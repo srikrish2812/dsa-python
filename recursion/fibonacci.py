@@ -21,10 +21,8 @@ def is_prime(n):
 def get_fib(n):
     if n in fib_cache:
         return fib_cache[n]
-    if n==0:
-        return 0
-    elif n==1:
-        return 1
+    if n<=1:
+        return n
     fib_cache[n] = get_fib(n-1) + get_fib(n-2)
     return fib_cache[n]
 
@@ -37,4 +35,4 @@ def sum_nthfib(n):
             s+=ith_fib
     return s
 
-print(sum_nthfib(35))
+print(sum_nthfib(52))
