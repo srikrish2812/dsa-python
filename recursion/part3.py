@@ -1,7 +1,8 @@
 """
 Reverse an array using recursion
 """
-
+# space complexity is O(1)
+# time complexity is O(n)
 def rev_arr(i,a,n):
     if i>=n//2:return
     a[i],a[n-1-i] = a[n-i-1],a[i]
