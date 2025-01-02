@@ -35,4 +35,4 @@ def sum_nthfib(n):
             s+=ith_fib
     return s
 
-print(sum_nthfib(52))
+#print(sum_nthfib(52))
