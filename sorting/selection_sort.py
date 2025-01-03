@@ -14,7 +14,7 @@ def sel_sort(arr):
     return arr
 
 def main():
-    arr=[70,40,30,10,50,20,60]
+    arr=[70,10,30,10,50,20,60]
     print(sel_sort(arr=arr))
 
 if __name__ == "__main__":
