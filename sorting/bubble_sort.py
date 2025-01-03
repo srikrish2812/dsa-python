@@ -5,6 +5,7 @@ Bubble Sort:
     3. Repeat 1 and 2
 
 Worst case TC = O(n^2)
+Average case TC = O(n^2)
 Best case(array is already sorted) TC = O(n)
 """
 
