@@ -13,4 +13,9 @@ def sel_sort(arr):
         arr[i], arr[min_index] = arr[min_index], arr[i]
     return arr
 
-print(sel_sort(arr=[70,40,30,10,50,60]))
+def main():
+    arr=[70,40,30,10,50,20,60]
+    print(sel_sort(arr=arr))
+
+if __name__ == "__main__":
+    main()
