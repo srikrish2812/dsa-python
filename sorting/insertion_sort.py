@@ -6,7 +6,7 @@ Insertion Sort:
 
 Worst case TC = O(n^2)
 Average TC = O(n^2)
-Best case TC = O(n)
+Best case TC = O(n) # when array is already sorted
 """
 
 def insert_sort(arr):
