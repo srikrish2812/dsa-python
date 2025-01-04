@@ -36,15 +36,20 @@ def merge(arr, left, mid, right):
     for c in range(n):
         arr[left + c] = new_arr[c]
 
-def merge_sort(arr, left, right):
+def merge_sort_helper(arr, left, right):
     if left == right:
         return
     mid = (left + right) // 2
-    merge_sort(arr, left, mid)
-    merge_sort(arr, mid + 1, right)
+    merge_sort_helper(arr, left, mid)
+    merge_sort_helper(arr, mid + 1, right)
     merge(arr, left, mid, right)
 
-n = int(input())
-arr = list(map(int, input().split()))
-merge_sort(arr, 0, n - 1)
+def merge_sort(arr):
+    n = len(arr)
+    merge_sort_helper(arr,0,n-1)
+    return arr
+
+
+arr = [6,4,3,5,1,2]
+print(merge_sort(arr))
 print(*arr)
