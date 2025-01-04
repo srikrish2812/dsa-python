@@ -4,7 +4,8 @@ Insertion Sort:
     2. Start the range with the second element in the array from left(i=1)
     3. Increase range by 1
 
-In other words it takes the last elemetn in the array and
+In other words it takes the last element in each sub-array strating from left
+and places it in the correct position and increases the sub-array range.
 
 Worst case TC = O(n^2)
 Average TC = O(n^2)
