@@ -1,7 +1,7 @@
 """
 Insertion Sort:
     1. Insert last element in the range in it's correct position
-    2. Start with range 2 from left
+    2. Start with the second element in the array from left
     3. Increase range by 1
 
 Worst case TC = O(n^2)
