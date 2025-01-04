@@ -1,10 +1,13 @@
 """
 Merge Sort:
-    1.Divide and merge is the main operation
-    2.
-    3.
+    1.Divide: divide the array into subarrays until the length of each subarray is 1
+    2.Conquer: sort the individual subarrays by comparing them and merge them to form
+                an ultimate sorted array
 
 Worst Case TC = O(nlogn)
+Space Complexity for Additional Space = O(n)
+Space Complexity for Stack Space = O(logn)
+
 """
 
 def merge(arr, left, mid, right):
