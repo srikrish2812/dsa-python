@@ -11,9 +11,9 @@ def quick_sort_helper(arr, low, high):
     i = low
     j = high
     while i<j:
-        while arr[i]<=arr[low]: # increment i
+        while arr[i]<=arr[low] and i<=high-1: # increment i
             i+=1
-        while arr[j]>arr[low]: # decrement j
+        while arr[j]>arr[low] and j>=1: # decrement j
             j-=1
         if i<j:
             arr[i],arr[j] = arr[j],arr[i]
