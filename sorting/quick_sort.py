@@ -9,7 +9,7 @@ Quick Sort:
 Worst Case TC = O(n^2)
 Best Case TC = O(nlogn)
 
-Space complexity = O(1)
+Worst case Space complexity = O(1)
 
 """
 def quick_sort_helper(arr, low, high):
