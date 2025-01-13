@@ -6,11 +6,13 @@ Quick Sort:
     than pivot to the left and place elements greater than pivot
     to the right
 
-Worst Case TC = O(n^2)
-Best Case TC = O(nlogn)
+Worst Case TC = O(n^2) (array is already sorted)
+Best Case TC = O(nlogn) (partition happens at the middle)
 
-Worst case Space complexity = O(1)
+Worst case additional Space complexity = O(1)
 
+Best case Stack space complexity = O(logn) (happens when paritition happens at the middle)
+Worst case Stack space complexity = O(n) (array is already sorted)
 """
 def quick_sort_helper(arr, low, high):
     i = low
