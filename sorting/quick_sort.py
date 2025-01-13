@@ -14,7 +14,7 @@ Worst case additional Space complexity = O(1)
 Best case Stack space complexity = O(logn) (happens when paritition happens at the middle)
 Worst case Stack space complexity = O(n) (array is already sorted)
 """
-def quick_sort_helper(arr, low, high):
+def partition(arr, low, high):
     i = low
     j = high
     while i<j:
@@ -30,7 +30,7 @@ def quick_sort_helper(arr, low, high):
 def quick_sort(arr, low, high):
     if low<high:
         # at index j partition occurs
-        j = quick_sort_helper(arr, low, high) # return the index j
+        j = partition(arr, low, high) # return the index j
         quick_sort(arr,low,j-1)
         quick_sort(arr,j+1, high)
     else:
