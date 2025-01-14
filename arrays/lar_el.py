@@ -14,7 +14,7 @@ def brute_force(arr):
 def optimal(arr):
     # TC = O(n)
     max_el = arr[0]
-    for el in arr:
+    for el in arr[1:]:
         if el>max_el: max_el=el
     return max_el
 
