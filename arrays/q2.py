@@ -50,5 +50,5 @@ def appr_3(arr):
         elif max_el>el and el>sec_lar:
             sec_lar = el
     return sec_lar
-
+arr = [50,40,20,10,60]
 print("Optimal approach:", appr_3(arr))
