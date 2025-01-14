@@ -38,3 +38,17 @@ def appr_2(arr):
 print("Approach 2:", appr_2(arr))
 
 # Optimal Approach - Appraoch 3:
+def appr_3(arr):
+    # TC = O(n)
+    # SC = O(1)
+    max_el = arr[0]
+    sec_lar = float('inf')
+    for el in arr:
+        if el>max_el:
+            sec_lar = max_el
+            max_el = el
+        elif max_el>el and el>sec_lar:
+            sec_lar = el
+    return sec_lar
+
+print("Optimal approach:", appr_3(arr))
