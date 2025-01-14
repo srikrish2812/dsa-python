@@ -8,11 +8,14 @@ Find the largest element in the array
 
 def brute_force(arr):
     # TC = O(nlogn)
+    # SC = O(n)
+    # # it performs merge sort
     arr.sort()
     return arr[len(arr)-1]
 
 def optimal(arr):
     # TC = O(n)
+    # SC = O(1)
     max_el = arr[0]
     for el in arr[1:]:
         if el>max_el: max_el=el
