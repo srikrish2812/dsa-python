@@ -32,6 +32,8 @@ print(rem_dup([5,5,7,7,9,9]))
 
 # Remove duplicates Optimal Approach
 def opt_remdup(arr):
+    #TC = O(n) [for loop]
+    #SC = O(1)
     i = 0
     j = 1
     for j in range(1,len(arr)-1):
