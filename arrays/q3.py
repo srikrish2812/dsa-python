@@ -1,7 +1,7 @@
 """
 1. Check if array is sorted
-2. Remove duplicates
-3. Move zeros to the end
+2. Remove duplicates:
+    a. Two pointer method is optimal approach
 """
 def is_sorted(arr):
     # TC = O(n)
@@ -19,18 +19,22 @@ print(f"Check if {arr_2} is sorted: {is_sorted(arr_2)}")
 
 #brute force approach
 def rem_dup(arr):
-    #TC = O(n+n+n) [dict.fromkeys+list()+while loop]
-    #SC = O(n) [ord_set]
-    ord_set = list(dict.fromkeys(arr))
-    i=0
-    while i<len(ord_set):
-        arr[i] = ord_set[i]
-        i+=1
-    return arr
-
-print(rem_dup([5,5,7,7,9,9]))
+    #TC = O(nlogn+n)
+    #SC = O(n)
+    s = set()
+    for i in range(len(arr)):
+        s.add(arr[i])
+    j = 0
+    for k in s:
+        arr[j] = k
+        j+=1
+    return len(s)
+a = [5,5,7,7,9,9]
+print(rem_dup(a))
+print(a)
 
 # Remove duplicates Optimal Approach
+# This is called two pointer method
 def opt_remdup(arr):
     #TC = O(n) [for loop]
     #SC = O(1)
