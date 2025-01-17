@@ -38,8 +38,8 @@ print(a)
 def opt_remdup(arr):
     #TC = O(n) [for loop]
     #SC = O(1)
-    i = 0
-    j = 1
+    i = 0 # references latest unique element
+    j = 1 # checks for new unique element
     for j in range(1,len(arr)-1):
         if arr[i]!=arr[j]:
             arr[i+1] = arr[j]
@@ -48,3 +48,8 @@ def opt_remdup(arr):
 
 arr = [5,5,7,7,9,9]
 print(opt_remdup(arr),'\n',arr)
+
+
+"""
+Write code so that the array has maximum two duplicates
+"""
