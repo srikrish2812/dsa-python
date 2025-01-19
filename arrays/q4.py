@@ -42,5 +42,5 @@ def optimal(arr):
             arr[i], arr[j]=arr[j], arr[i]
             i+=1
     print(arr)
-    return i+1 # number of non-zero elements
-optimal(arr=[0,0,3,0,0,4,0,0,7])
+    return i # number of non-zero elements
+print("Number of non-zero elements =", optimal(arr=[0,0,3,0,0,4,0,0,7]))
