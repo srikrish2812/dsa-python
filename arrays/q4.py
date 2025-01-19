@@ -44,3 +44,19 @@ def optimal(arr):
     print(arr)
     return i # number of non-zero elements
 print("Number of non-zero elements =", optimal(arr=[0,0,3,0,0,4,0,0,7]))
+
+
+"""
+Moving zeros to start == Moving non-zeros to last
+"""
+
+def move_zeros_start(arr):
+    n = len(arr)
+    i = n-1
+    for j in range(n-1,-1,-1):
+        if arr[j]!=0:
+            arr[i],arr[j]=arr[j],arr[i]
+            i-=1
+    print(arr)
+    return i # no of non-zeros
+print(move_zeros_start(arr=[0,0,2,3,4,0,0]))
