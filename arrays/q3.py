@@ -53,3 +53,17 @@ print(opt_remdup(arr),'\n',arr)
 """
 Write code so that the array has maximum two duplicates
 """
+def max_two_dups(arr):
+    i, count=1,1
+    for j in range(1,len(arr)):
+        if arr[j]==arr[j-1]:
+            count+=1
+        else:
+            count=1
+        if count<=2:
+            arr[i] = arr[j]
+            i+=1
+    print(arr)
+    return i
+
+max_two_dups(arr=[1,1,1,2,2,3,3,4,5,5,5])
