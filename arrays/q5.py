@@ -80,3 +80,31 @@ def linear_search(target=6, arr=[12,3,4,5,6,7,77]):
             return i
     return -1
 print(linear_search())
+
+def reverse(arr, start, end):
+        while start<end:
+            arr[start], arr[end] = arr[end], arr[start]
+            start+=1
+            end-=1
+
+
+
+def rotateArray(nums=[1,2,3,4,5,6], x=2, y=1):
+    """
+    Rotate the array x times right andf y times left
+    """
+    #Write your code here...
+    n = len(nums)
+    #rotate right x places
+    x=x%n
+    reverse(nums, n-x,n-1)
+    reverse(nums,0,n-x-1)
+    reverse(nums,0,n-1)
+
+    #rotate left y places
+    y=y%n
+    reverse(nums,0,y-1)
+    reverse(nums,y,n-1)
+    reverse(nums, 0,n-1)
+    return nums
+print(rotateArray())
