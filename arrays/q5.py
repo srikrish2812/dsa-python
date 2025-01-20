@@ -1,7 +1,6 @@
 """
 Left rotate the array by one place
 """
-from math.part1 import n
 def left_rotate(arr=[1,2,3,4,5,6,7]):
     """
     TC = O(n)
@@ -59,6 +58,7 @@ def kleft_rotate_optimal(k=3,arr=[1,2,3,4,5,6,7]):
     SC = O(1)
     """
     n = len(arr)
+    k = k%n
     arr =arr[k-1::-1] + arr[n-1:k-1:-1]
     arr = arr[::-1]
     print(arr)
