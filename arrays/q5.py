@@ -28,8 +28,7 @@ def kleft_rotate_brute(k=3,arr=[1,2,3,4,5,6,7]):
     """
     temp = []
     n = len(arr)
-    if k>n:
-        k=k%n
+    k = k%n
     for el in arr[0:k]:
         temp.append(el)
 
@@ -50,19 +49,25 @@ def kleft_rotate_optimal(k=3,arr=[1,2,3,4,5,6,7]):
     2. Reverse the last n-k elements
     3. Then reverse the whole array
 
-    TC = O(k) + O(n-k) + O(n) + O(n) = O(n)
-    O(k) -> reversing first k elements
-    O(n-k) -> reversing last n-k elements
-    O(n) -> concatenation of lists
-    O(n) -> reversing the list again
+    TC = O(k) + O(n-k) + O(n) = O(n)
     SC = O(1)
+    We can also do this using slicing but this method
+    does not have true O(1) space complexity
+    arr = arr[k-1::-1] + arr[n-1:k_1:-1]
+    arr = arr[::-1]
     """
     n = len(arr)
     k = k%n
-    arr =arr[k-1::-1] + arr[n-1:k-1:-1]
-    arr = arr[::-1]
+    def reverse(arr,start,end):
+        while start<end:
+            arr[start], arr[end] = arr[end], arr[start]
+            start+=1
+            end-=1
+    reverse(arr,0,k-1)
+    reverse(arr,k,n-1)
+    reverse(arr,0,n-1)
     print(arr)
-kleft_rotate_optimal()
+kleft_rotate_optimal(k=6)
 
 def linear_search(target=6, arr=[12,3,4,5,6,7,77]):
     """
