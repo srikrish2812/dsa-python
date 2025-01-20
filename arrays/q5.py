@@ -1,6 +1,7 @@
 """
 Left rotate the array by one place
 """
+from math.part1 import n
 def left_rotate(arr=[1,2,3,4,5,6,7]):
     """
     TC = O(n)
@@ -66,6 +67,8 @@ kleft_rotate_optimal()
 def linear_search(target=6, arr=[12,3,4,5,6,7,77]):
     """
     retunr the index of the target element in arr
+    TC=O(n)
+    SC = O(1)
     """
     for i in range(len(arr)):
         if arr[i] == target:
