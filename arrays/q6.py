@@ -1,5 +1,5 @@
 """
-Union of two arrays:
+Union of two sorted arrays:
 """
 
 def brute_force(a=[3,3,4,5,6,10,7,7],b=[4,5,10,6,7,8,8]):
