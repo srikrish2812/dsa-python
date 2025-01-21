@@ -2,8 +2,9 @@
 1. Maximum consecutive ones
 2. Find missing number
 """
+from tkinter.constants import OFF
 
-def maxcon_ones(arr=[1,0,1,1,0,1,1,1,1,0]):
+def maxcon_ones(arr=[1,0,1,1,0,1,1,1,1,1,0]):
     """
     TC=O(n)
     SC = O(1)
@@ -34,3 +35,37 @@ def find_miss_brute(arr=[5,3,1,6,2],n=6):
                 present=1
                 break
         if present==0: return i
+
+print(find_miss_brute())
+
+def find_miss_appr2(arr=[5,3,4,6,2],n=6):
+    """
+    This method is called hashing
+
+    TC = O(2*n) = O(n)
+    SC = O(n)
+    """
+    temp = [0]*(n+1)
+    for el in arr:
+        temp[el]=1
+    for i in range(1,n+1):
+        if temp[i]==0:
+            return i
+
+print(find_miss_appr2())
+
+def find_miss_optimal(arr=[5,3,1,2,4],n=6):
+    """
+    TC = O(n)
+    SC=O(1)
+
+    Find the sum of first n numbers and subtract the sum of
+    elements in the array. Make sure sum2 can store large values
+    because if n=10^6 then sum2 ~= 10^12/2
+    """
+    sum2 = n*(n+1)/2
+    sum1=0
+    for el in arr:
+        sum1+=el
+    return int(sum2-sum1)
+print(find_miss_optimal())
