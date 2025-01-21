@@ -69,3 +69,21 @@ def find_miss_optimal(arr=[5,3,1,2,4],n=6):
         sum1+=el
     return int(sum2-sum1)
 print(find_miss_optimal())
+
+
+def find_miss_xor(arr=[5,3,1,4,2],n=6):
+    """
+    TC = O(n)
+    SC = O(1)
+    Using XOR we can find the missing element
+    XOR1 = XOR(elements in the array)
+    XOR2 = XOR(1 to n both included)
+    ans = XOR(XOR1,XOR2)
+    """
+    XOR1 = 0
+    XOR2 = 0
+    for i in range(n-1):
+        XOR1 = XOR1^arr[i]
+        XOR2 = XOR2^(i+1)
+    return XOR1^XOR2^n
+print(find_miss_xor())
