@@ -58,3 +58,39 @@ def optimal(a = [3,3,4,5,6,7,7,10], b=[4,5,6,7,8,8]):
     return ans
 
 print("Optimal approach", optimal())
+
+
+"""
+You are given a sorted integer array and your task is to return
+a new array that contains the squares of each element in arr,
+sorted in non-decreasing order
+
+input: [-5,-1,0,3,6]
+output: [0,1,9,25,36]
+"""
+
+class solution:
+    """
+    TC = O(n)
+    SC = O(n)
+
+    1. The extremes will have the maximum absolute values.
+    2. Keep two pointers at the start and end values
+    3. Compare these extreme values and insert the maximum
+    in the last position in the ans[] array and do it in a loop
+    4. Reduce the range inwards
+    """
+    def getSortedSquares(self, arr):
+        #Write your code here...
+        n = len(arr)
+        ans = [0]*n
+        left=0
+        right=n-1
+        for i in range(n-1,-1,-1):
+            if abs(arr[left])>abs(arr[right]):
+                ans[i] = arr[left]**2
+                left+=1
+            else:
+                ans[i] = arr[right]**2
+                right-=1
+        return ans
