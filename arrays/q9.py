@@ -50,6 +50,10 @@ print("Dict Approach :",dict_appr())
 
 
 def xor_approach(arr=ARR):
+    """
+    TC = O(n)
+    SC = O(1)
+    """
     xor = 0
     for num in arr:
         xor=xor^num
