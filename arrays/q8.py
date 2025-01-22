@@ -2,7 +2,6 @@
 1. Maximum consecutive ones
 2. Find missing number
 """
-from tkinter.constants import OFF
 
 def maxcon_ones(arr=[1,0,1,1,0,1,1,1,1,1,0]):
     """
