@@ -40,7 +40,7 @@ def brute_appr_2(arr=ARR, k=K):
 print(brute_appr_2())
 
 
-def prefix_sum_appr(arr=ARR, k=K):
+def prefix_sum_appr(arr=[1,-1,5,-2,3], k=3):
     """
     We will use prefix sum appraoch to solve this.
     Use a map to store the cummulative sum and  its corresponding indec
@@ -62,9 +62,17 @@ def prefix_sum_appr(arr=ARR, k=K):
     dictionary operations to degrade to O(n), the overall time complexity
     is O(n^2)
     5. Space complexity = O(n)
+
+    We can use SortedDict from sortedcontainers module. SortedDict()
+    operation(lookup, insertion) have O(logn) in the worst case. This
+    is very close to C++ map data structure
+    * Average Case: Since SortedDict operations (insertion, lookup)
+    are O(logn), the overall time complexity is O(nlogn).
+    * Worst Case: The worst-case time complexity is also O(nlogn).
     """
+    from sortedcontainers import SortedDict
     sum, max = 0,0
-    m = dict()
+    m = SortedDict()
     n = len(arr)
     for i in range(n):
         sum+=arr[i]
