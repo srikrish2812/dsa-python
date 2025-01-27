@@ -48,8 +48,20 @@ def prefix_sum_appr(arr=ARR, k=K):
     - check if sum==k then update max
     - check if sum-k is present in the dict() then update max
     - update prefic sum if it is not present in the dict() already
-    TC = O(nlogn)
-    SC = O(n)
+
+    1. Dictionary Lookup (sum - k in m):
+    In Python, dictionary lookups are O(1) on average. However,
+    in the worst case (due to hash collisions), they can degrade
+    to O(n).
+    2. Dictionary Insertion (m[sum] = i): Similarly, dictionary
+    insertions are O(1) on average but can degrade to O(n) in the
+    worst case.
+    3. Average Case: Since dictionary operations are O(1) on average,
+    the overall time complexity is O(n).
+    4. Worst Case: In the worst case, where hash collisions cause
+    dictionary operations to degrade to O(n), the overall time complexity
+    is O(n^2)
+    5. Space complexity = O(n)
     """
     sum, max = 0,0
     m = dict()
