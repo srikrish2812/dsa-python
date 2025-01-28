@@ -108,3 +108,36 @@ def shortestSubarrayWithSumK(arr=ARR, k=K):
 
     return -1 if min_len == float('inf') else min_len
 print("Shortest subarray length =",shortestSubarrayWithSumK())
+
+
+def optimal_appr(arr=ARR,k=K):
+    """
+    WE will use sliding window or two pointer approach to
+    solve this. This approach works only for positive numbers
+    TC = O(n)
+    SC = O(1)
+    """
+    sum_val = arr[0]
+    max_val = 0
+    i,j=0,0
+    n = len(arr)
+    while j<n:
+        if sum_val==k:
+            length = j-i+1
+            max_val = max(max_val, length)
+            j+=1
+            if j<n: sum_val+=arr[j]
+        elif sum_val<k:
+            j+=1
+            if j<n: sum_val+=arr[j]
+        elif sum_val>k:
+            if i==j:
+                i+=1
+                j+=1
+                if j<n: sum_val=arr[j]
+            else:
+                sum_val-=arr[i]
+                i+=1
+    return max_val
+
+print("Optimal Approach for longest subarray",optimal_appr())
