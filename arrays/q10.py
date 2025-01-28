@@ -87,3 +87,24 @@ def prefix_sum_appr(arr=[1,-1,5,-2,3], k=3):
     return max
 
 print(prefix_sum_appr())
+
+def shortestSubarrayWithSumK(arr=ARR, k=K):
+    sum_val = 0
+    n = len(arr)
+    min_len = float('inf')
+    m = {}
+
+    for i in range(n):
+        sum_val += arr[i]
+
+        if sum_val == k:
+            min_len = min(min_len, i + 1)
+
+        if (sum_val - k) in m:
+            min_len = min(min_len, i - m[sum_val - k])
+
+        # Update the map entry for sum at the current index
+        m[sum_val] = i
+
+    return -1 if min_len == float('inf') else min_len
+print("Shortest subarray length =",shortestSubarrayWithSumK())
