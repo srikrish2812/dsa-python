@@ -26,3 +26,14 @@ def binary_search(arr=ARR,target=12):
     return -1
 
 print(binary_search())
+
+def recursive_binary_search(arr, low, high, target):
+    if low>high: return -1
+    mid = (low+high)//2
+    if target==arr[mid]: return mid
+    elif target>arr[mid]: 
+        return recursive_binary_search(arr,mid+1,high, target)
+    else:
+        return recursive_binary_search(arr, low, mid-1, target)
+    
+print(f"Recursive Binary Search: {recursive_binary_search(ARR,low=0,high=7,target=12)}")
