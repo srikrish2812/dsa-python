@@ -28,7 +28,8 @@ print(f"Brute Force (first, last) = {brute_first_last()}")
 
 def optimal_first_last(arr=ARR, x=X):
     """
-
+    TC = O(logn)
+    SC = O(1)
     """
     def first_occ(arr,x):
         ans=-1
@@ -64,5 +65,7 @@ def optimal_first_last(arr=ARR, x=X):
 print("Optimal Approach (first, last) =",optimal_first_last())
 
 first, last = optimal_first_last()
-num_occ = last-first+1
-print(f"Number of Occurences = {num_occ}")
+if first==-1:
+    print("Number of occurences = 0")
+else:
+    print(f"Number of Occurences = {last-first+1}")
