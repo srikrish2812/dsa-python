@@ -62,3 +62,7 @@ def optimal_first_last(arr=ARR, x=X):
         return ans
     return first_occ(ARR,X), last_occ(ARR,X)
 print("Optimal Approach (first, last) =",optimal_first_last())
+
+first, last = optimal_first_last()
+num_occ = last-first+1
+print(f"Number of Occurences = {num_occ}")
