@@ -7,7 +7,7 @@
 
 """
 
-ARR = [2,5,5,5,6,8,9,9,11,12]
+ARR = [2,5,5,5,5,6,8,9,9,11,12]
 X = 5
 
 def brute_first_last(arr=ARR, x=X):
@@ -24,3 +24,41 @@ def brute_first_last(arr=ARR, x=X):
     return first, last
 
 print(f"Brute Force (first, last) = {brute_first_last()}")
+
+
+def optimal_first_last(arr=ARR, x=X):
+    """
+
+    """
+    def first_occ(arr,x):
+        ans=-1
+        low=0
+        high=len(arr)-1
+        while low<=high:
+            mid=(low+high)//2
+            if arr[mid]==x:
+                ans=mid
+                high = mid-1
+            elif arr[mid]>x:
+                high=mid-1
+            else:
+                low=mid+1
+        return ans
+    #return first_occ(ARR,X)
+
+    def last_occ(arr,x):
+        ans=-1
+        low=0
+        high=len(arr)-1
+        while low<=high:
+            mid=(low+high)//2
+            if arr[mid]==x:
+                ans=mid
+                low = mid+1
+            elif arr[mid]<x:
+                low=mid+1
+            else:
+                high=mid-1
+        return ans
+    return first_occ(ARR,X), last_occ(ARR,X)
+print("Optimal Approach (first, last) =",optimal_first_last())
