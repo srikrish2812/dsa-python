@@ -4,8 +4,8 @@ Search a Rotated Sorted Array with duplicates:
     and an integer 'k'. You need to return True if k is present
     in the array otherwise return False.
 
-Worst Case TC = O(logn)
-Average Case TC = O(n)
+Worst Case TC = O(n/2)
+Average Case TC = O(logn)
 Best Case TC = O(logn)
 SC = O(1)
 """
