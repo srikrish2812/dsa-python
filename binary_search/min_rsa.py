@@ -3,7 +3,14 @@
 """
 ARR = [6,7,8,9,3,4,5]
 def min_rot_sort(arr=ARR):
-
+    """
+    Whenever rotated sorted array is given it always has a sorted part.
+    First we check for the sorted part and proceed with the logic according
+    to the question.
+    
+    TC = O(logn)
+    SC = O(1)
+    """
     low = 0
     n = len(arr)
     high=n-1
@@ -19,3 +26,4 @@ def min_rot_sort(arr=ARR):
     return ans
 
 print("Minimum element =",min_rot_sort())
+
