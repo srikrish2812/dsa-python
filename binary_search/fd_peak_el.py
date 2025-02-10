@@ -5,6 +5,10 @@ Find the peak element:
 """
 ARR = [1,2,3,4,5,6,7,8,4,2,1]
 def brute_appr(arr=ARR):
+    """
+    TC = O(n)
+    SC = O(1)
+    """
     n = len(arr)
     if n==1:
         return 0
@@ -20,6 +24,10 @@ print(f"Using Linear Search Approach: {brute_appr()}")
 
 
 def opt_appr(arr=ARR):
+    """
+    TC = O(logn)
+    SC = O(1)
+    """
     n =len(arr)
     if n==1: return 0
     if arr[0]>arr[1]: return 0
