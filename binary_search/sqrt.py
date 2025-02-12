@@ -17,6 +17,12 @@ def brute_appr(n):
 print("Brute Force Approach: ",brute_appr(4))
 
 def optimal_appr(n):
+    """
+    TC = O(logn)
+    SC = O(1)
+
+    If n is 1 then sqrt(1)=1. SO our search space is [1,n]
+    """
     low, high=0,n
     ans=-1
     while low<=high:
