@@ -33,4 +33,4 @@ def optimal_appr(n):
             ans=mid
             low=mid+1
     return ans
-print(f"Using Optimal Approach: {optimal_appr(5)}")
+print(f"Using Optimal Approach: {optimal_appr(10**9)}")
