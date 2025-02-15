@@ -32,6 +32,9 @@ def brute_appr(arr=ARR, h=H):
     1. The monkey will take n hours to finish the bananas with a given speed k>=max(arr) bananas/hours
     2. So minimum it takes n hours to eat the bananas
     3. So in the approach we will check for speeds from m=1 to max(arr)
+
+    TC = O(n*max(arr))
+    SC = O(1 )
     """
     n = len(arr)
     for m in range(1,max(arr)+1):
@@ -43,3 +46,25 @@ def brute_appr(arr=ARR, h=H):
     return -1
 
 print(f"Using brute force: {brute_appr()}")
+
+
+def optimal_appr(arr=ARR,h=H):
+    """
+    TC = O(n* log(max(arr)))
+    """
+    low= 1
+    high = max(arr)
+    ans = max(arr)
+
+    while low<=high:
+        mid = low + (high-low)//2
+        total_time = 0
+        for ban in arr:
+            total_time+= ceil(ban/mid)
+        if total_time<=h:
+            ans = mid
+            high=mid-1
+        else:
+            low=mid+1
+    return ans
+print(f"Using Optimal Approach: {optimal_appr()}")
