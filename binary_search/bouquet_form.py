@@ -29,3 +29,22 @@ def brute_force(arr,k,m):
     return -1
 
 print(f"Using Brute Force approach: {brute_force(arr=[4,5,4,9,6,6,5,15,14],k=3,m=2)}")
+
+
+def optimal_appr(arr,k,m):
+    n = len(arr)
+    low = min(arr)
+    high = max(arr)
+    ans = max(arr)
+    if n<m*k: return -1
+
+    while low<=high:
+        mid = low + (high-low)//2
+        if num_bouquets(arr,k,mid)>=m:
+            ans =mid
+            high=mid-1
+        else:
+            low = mid+1
+    return ans
+
+print(f"Using optimal approach: {optimal_appr([4,5,4,9,6,6,5,15,14],3,2)}")
