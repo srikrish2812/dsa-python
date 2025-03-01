@@ -11,6 +11,7 @@ pytest = "^8.3.4"
 pycowsay = "^0.0.0.2"
 tqdm = "^4.67.1"
 sortedcontainers = "^2.4.0"
+pygame = "^2.6.1"
 
 
 [build-system]
