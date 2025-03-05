@@ -3,6 +3,10 @@ Count the number of subsequences with sum==k
 """
 
 def count_subseq(i,s,arr,n,k):
+    """
+    TC =O(2^n)
+    SC = O(n) -> recursion stack space
+    """
     if i>=n:
         if s==k:
             return 1

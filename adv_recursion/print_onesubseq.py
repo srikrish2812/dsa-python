@@ -31,6 +31,11 @@ def print_subsequence(i,v,s,arr,n,k, is_printed):
 
 
 def alt_implementation(i,v,s,arr,n,k):
+    """
+    TC = O(2^n)
+    SC = recursion space + auxillary space = O(n) + O(n) -> O(n)
+    """
+
     # base case
     if i>=n:
         if s==k:
