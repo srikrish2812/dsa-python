@@ -51,8 +51,8 @@ def alt_implementation(i,v,s,arr,n,k):
     return False
 
 if __name__=="__main__":
-   ARR = [4,9,5]
-   K=9
+   ARR = [3,4,7]
+   K=7
    v=[]
    i=0
    s=0
