@@ -27,6 +27,7 @@ def binary_search(arr=ARR,target=12):
 
 print(binary_search())
 
+
 def recursive_binary_search(arr, low, high, target):
     if low>high: return -1
     mid = (low+high)//2
