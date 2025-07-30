@@ -8,3 +8,5 @@ s = "abc"
 
 for perm in itertools.permutations(s):
     print(''.join(perm))
+
+print(1+2)
